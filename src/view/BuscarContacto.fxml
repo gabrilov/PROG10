@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="533.0" prefWidth="665.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BuscarContactoController">
+   <children>
+      <TableView fx:id="tblContactos" layoutX="36.0" layoutY="235.0" prefHeight="219.0" prefWidth="594.0">
+         <columns>
+            <TableColumn fx:id="colNombre" prefWidth="184.0" text="Nombre" />
+            <TableColumn fx:id="colTelefono" minWidth="0.0" prefWidth="199.0" text="Teléfono" />
+            <TableColumn fx:id="colEmail" prefWidth="210.0" text="Correo electrónico" />
+         </columns>
+      </TableView>
+      <TextField fx:id="txtNombre" layoutX="23.0" layoutY="120.0" onAction="#btnBuscarHandler" prefHeight="37.0" prefWidth="269.0" promptText="Ej. Paco">
+         <font>
+            <Font name="Amazon Ember" size="19.0" />
+         </font>
+      </TextField>
+      <Label layoutX="23.0" layoutY="95.0" text="Nombre">
+         <font>
+            <Font name="Amazon Ember" size="19.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnBuscar" contentDisplay="CENTER" layoutX="324.0" layoutY="120.0" mnemonicParsing="false" onAction="#btnBuscarHandler" prefHeight="37.0" prefWidth="177.0" text="Buscar" textAlignment="CENTER" textFill="#5e0903" wrapText="true">
+         <font>
+            <Font name="Amazon Ember" size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnVolver" contentDisplay="CENTER" layoutX="279.0" layoutY="470.0" mnemonicParsing="false" onAction="#btnVolverHandler" prefHeight="37.0" prefWidth="98.0" text="Volver" textAlignment="CENTER" textFill="#5e0903" wrapText="true">
+         <font>
+            <Font name="Amazon Ember" size="19.0" />
+         </font>
+      </Button>
+      <Text layoutX="109.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="BUSCADOR DE CONTACTOS">
+         <font>
+            <Font name="Amazon Ember" size="37.0" />
+         </font>
+      </Text>
+      <Button fx:id="btnCargarTodos" contentDisplay="CENTER" disable="true" layoutX="226.0" layoutY="185.0" mnemonicParsing="false" onAction="#btnCargarTodosHandler" prefHeight="37.0" prefWidth="235.0" text="Todos los contactos" textAlignment="CENTER" textFill="#5e0903" wrapText="true">
+         <font>
+            <Font name="Amazon Ember" size="19.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
